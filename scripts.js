@@ -27,16 +27,12 @@ window.onscroll = function() {
     console.log(off.y);
 
     if (off.y >= '1001' && off.y <= '1999') {
-        var one = document.getElementsByClassName('one')[0];
-        one.classList.add('fadeout');
         var two = document.getElementsByClassName('two')[0];
-        two.classList.remove('hide');
+        two.classList.add('fadein');
     }
 
     if (off.y <= '1000') {
-        var one = document.getElementsByClassName('one')[0];
-        one.classList.remove('hide');
         var two = document.getElementsByClassName('two')[0];
-        two.classList.add('hide');
+        two.classList.remove('fadein');
     }
 }
