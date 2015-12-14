@@ -26,13 +26,20 @@ window.onscroll = function() {
     var off = dw_getScrollOffsets();
     console.log(off.y);
 
+    var two = document.getElementsByClassName('two')[0];
+    var three = document.getElementsByClassName('three')[0];
+
     if (off.y >= '1001' && off.y <= '1999') {
-        var two = document.getElementsByClassName('two')[0];
-        two.classList.add('fadein');
+        two.style.opacity = "1";
+        three.style.opacity = "0";
     }
 
     if (off.y <= '1000') {
-        var two = document.getElementsByClassName('two')[0];
-        two.classList.remove('fadein');
+        two.style.opacity = "0";
+    }
+
+    if (off.y >= '2001' && off.y <= '2999') {
+        two.style.opacity = "0";
+        three.style.opacity = "1";
     }
 }
